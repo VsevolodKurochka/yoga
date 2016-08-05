@@ -38,19 +38,18 @@ Start: HIDDEN AND VISIBLE UTILITIES
 /* =====================
 End:  HIDDEN AND VISIBLE UTILITIES
 ======================== */
+    
+
+.min-height{
+  min-height: 1px;
+}
 %relative{
   position: relative;
 }
 %global-block{
-  min-height: 1px;
-  @include resp-min(sm){
-    padding-left: $gutter;
-    padding-right: $gutter; 
-  }
-  @include resp-max(sm){
-    padding-left: $gutter / 2;
-    padding-right: $gutter / 2; 
-  }
+  @extend .min-height;
+  padding-left: $gutter;
+  padding-right: $gutter; 
   @extend %relative;
 }
 .center-block {
@@ -64,6 +63,8 @@ End:  HIDDEN AND VISIBLE UTILITIES
 }
 .row{
   @extend .cf;
+  margin-left: -15px;
+  margin-right: -15px;
 }
 [class*="col-"] {
   @extend %global-block;
@@ -90,28 +91,29 @@ End:  HIDDEN AND VISIBLE UTILITIES
   }
 }
 .padding-block{
-  @include resp-min(sm){
-    padding-top: 75px;
-    padding-bottom: 75px;
-  }
-  @include resp-max(sm){
-    padding-top: 50px;
-    padding-bottom: 50px;
-  } 
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 section{
   @extend .cf;
   @extend .padding-block;
   @extend %relative;
 }
-
-// @each $breakpoint-name, $breakpoint-value in $breakpoints{
-//   @include resp-min(#{$breakpoint-name}){
-//     .pull-#{$breakpoint-name}-right{
-//       float: right;
-//     }
-//     .pull-#{$breakpoint-name}-left{
-//       float: left;
-//     }
-//   }
-// }
+/* ===================== 
+Start: CENTERING      
+======================== */
+@each $br-name, $br-val in $breakpoints{
+  @include resp-max($br-name){
+    .max-#{$br-name}-center{
+      text-align: center;
+    }
+  }
+  @include resp-min($br-name){
+    .pull-#{$br-name}-right{
+      float: right;
+    }
+  }
+}
+/* =====================
+End:  CENTERING
+======================== */

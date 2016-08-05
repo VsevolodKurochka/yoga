@@ -14,7 +14,6 @@ Start: BUTTON
   @extend .block-inline;
   @extend .bold;
   @include size(text_default);
-  @include color("white");
   &-effect{
    &:before{
       content: "";
@@ -35,29 +34,22 @@ Start: BUTTON
       }
     }
   }
-
-  &-red{
-    background-image: linear-gradient(to top, #ff1313, #ff655a);
-    box-shadow: 0 6px 16px rgba(248,41,32,.49), inset 0 -4px rgba(0,0,0,.15);
-    border-radius: 32px;
-    &:before{
-      background-color: #FFBA75;
-    }
-    &:hover{
-      @include color("black");
-    }    
+  &-border{
+    @include bg("../img/btn-border.png", center center, no-repeat, contain);
+    @extend .green-d;
+    padding: 10px 20px;
+    width: 340px;
+    height: 50px;
   }
-  &-green{
-    background-image: linear-gradient(to top, #02c167, #00ef7e 99%);
-    box-shadow: 0 6px 16px rgba(2,193,103,.49), inset 0 -4px rgba(0,0,0,.15);
-    border-radius: 25px;
-    background-color: #f44336;
-    &:hover{
-      background-image: linear-gradient(to top, #00ef7e ,#02c167 99%);
-    }
-    &:before{
-      background-color: #FFBA75;
-    }
+  &-white{
+    background-color: transparent;
+    border: 5px solid #fff;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    @extend .white;
+    padding-top: 20px;
+    padding-bottom: 20px;
   }
   &-single{
     @include resp-min(sm){
@@ -72,55 +64,6 @@ Start: BUTTON
 End:  BUTTON
 ======================== */
     
-/* ===================== 
-Start: TOGGLER      
-======================== */
-.toggle{
-  &-subtitle-no-margin{
-    .subtitle{
-      margin-bottom: 0;
-    }
-  }
-  &-inner{
-    @extend .cf;
-    @include resp-min(sm){
-      &-big-margin{
-       margin-bottom: 150px;
-        &:last-child{
-          margin-bottom: 75px;
-        }
-      }
-      &-small-margin{
-        margin-bottom: 50px;
-        &:last-child{
-          margin-bottom: 0;
-        }
-      }
-    }
-    &-img{
-      @extend .block-center;
-    }
-  }
-  @include resp-min(sm){
-    //ODD - нечетное
-    .toggle-inner-right:nth-child(odd) .toggle-inner-img,
-    .toggle-inner-right:nth-child(even) .toggle-inner-text,
-    .toggle-inner-left:nth-child(odd) .toggle-inner-text,
-    .toggle-inner-left:nth-child(even).toggle-inner-img {      
-        float: right;
-    }
-    .toggle-inner-right:nth-child(even){
-      .toggle-inner-text{
-        .subtitle,p{
-          text-align: right;
-        }
-      }
-    }   
-  }
-}
-/* =====================
-End:  TOGGLER
-======================== */
 .list{
   li{
     position: relative; 
@@ -161,4 +104,33 @@ End:  TOGGLER
       }
     }
   }
+}
+.vertical-image{
+  &:before{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;   
+  }
+  img{
+   max-height: 100%;
+    vertical-align: middle;   
+  }
+}
+.circle-b{
+  @extend .text-center;
+  &-img{
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    @extend .vertical-image;
+    background-color: #fff;
+  }
+}
+.advantages {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-top: -50px;
 }

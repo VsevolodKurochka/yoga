@@ -11,7 +11,7 @@
   	<![endif]-->
 	<!-- <script src="js/jquery.js"></script> -->
 	<link rel="stylesheet" href="css/style.css">
-	<!-- Jquery, Bootstrap, WOW, Masked Input -->
+	<!-- Jquery, Bootstrap, Parallax -->
 	<script src="js/min.scripts.js"></script>
 	<script src="js/scripts.js"></script>
 
@@ -19,47 +19,93 @@
 </head>
 <body>
 	<main class="main">
-		<header class="header">
+		<header class="header parallax-window" data-parallax="scroll" data-image-src="img/header.jpg">
 			<div class="container">
-				<div class="header-logo">
-					<img src="img/logo.png" alt="">
-					<button type="button" class="navbar-toggle">
-		              <span class="icon-bar icon-bar-1"></span>
-		              <span class="icon-bar icon-bar-2"></span>
-		              <span class="icon-bar icon-bar-3"></span>
-		            </button>
+				<div class="row">
+					<div class="col-xs-12 col-md-2 max-md-center">
+						<img src="img/logo.png" alt="">
+						<button type="button" class="navbar-toggle">
+			              <span class="icon-bar icon-bar-1"></span>
+			              <span class="icon-bar icon-bar-2"></span>
+			              <span class="icon-bar icon-bar-3"></span>
+			            </button>
+					</div>
+					<div class="col-xs-12 col-md-6 header-menu">
+						<ul>
+							<li>
+								<a class="anchor" href="">Бонус </a>
+							</li>
+							<li>
+								<a class="anchor" href="">Для кого?</a>	
+							</li>
+							<li>
+								<a class="anchor" href="">Время и мест</a>	
+							</li>
+							<li>
+								<a class="anchor" href="">Кто ведет?</a>	
+							</li>
+							<li>
+								<a class="anchor" href="">Отзывы</a>	
+							</li>
+						</ul>
+					</div>
+					<div class="col-xs-12 col-md-4 header-btn">
+						<button class="btn btn-border" type="button" data-toggle="modal" data-target="#modal_form">Записаться на бесплатный урок</button>
+					</div>
 				</div>
-				<div class="header-phone">+38 (063) 505 62 63</div>
-				<!-- <div class="col-xs-6 header-menu">
-					<ul>
-						<li><a href="">Ссылка №1</a></li>
-						<li><a href="">Ссылка №2</a></li>
-						<li><a href="">Ссылка №3</a></li>
-						<li><a href="">Ссылка №4</a></li>
-					</ul>
-				</div> -->
 			</div>
+			<div class="container header-container-text">
+				<div class="row">
+					<div class="col-xs-12 col-md-7">
+						<h1 class="h1"><span class="tdu">Бесплатное</span>,<br>живое занятие по йоге</h1>
+						<h2 class="h2">Занятие по новой методике, которая объединяет в себе йогу, цигун и современные научные разработки в области здоровья и психологии</h2>
+						<div class="btn-single">
+							<button class="btn btn-white" type="button" data-toggle="modal" data-target="#modal_form">Записаться на <span class="tdu">бесплатное</span> занятие по йоге</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<img src="img/shadow.png" alt="" class="header-shadow">
 		</header>
+		<section class="advantages">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-sm-4">
+						<div class="circle-b">
+							<div class="circle-b-img"><img src="img/c1.png" alt=""></div>
+							<p>Улучшение самочувствия и снятие усталости уже на первом занятии</p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="circle-b">
+							<div class="circle-b-img"><img src="img/c2.png" alt=""></div>
+							<p>Опытные сертифицированные тренеры, прошедшие углубленное обучение йоги </p>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<div class="circle-b">
+							<div class="circle-b-img"><img src="img/c3.png" alt=""></div>
+							<p>Просторный зал в центре Киева с удобными ковриками и душевыми</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 		<section>
-			<div class="row">	
-				<div class="container">
-					<div class="col-xs-12">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In deserunt minus voluptatem, deleniti, ipsum quod rerum vel id quisquam officia saepe esse tempora provident dolore aut dolorem, nobis placeat? Adipisci non rem aliquam velit nemo eos quo, accusamus est doloremque assumenda placeat distinctio, dicta quis animi ut id ipsa voluptatibus, obcaecati eum odit quia veritatis. Ex perspiciatis libero vel, tempore debitis magni ullam consequatur itaque corporis reiciendis officiis, labore nostrum deleniti tenetur illum, velit explicabo molestias suscipit voluptatem doloremque facere ducimus fugiat non dolor. Nulla neque deserunt, vero provident quos eligendi. Fuga laudantium id, alias molestias itaque, porro esse eveniet corrupti ut tempora aliquam maiores fugit ipsum eaque sit sunt reiciendis.</p>
-					</div>
-					<div class="col-xs-12">
-						<div class="border-block col-xs-12 col-sm-4">
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates reprehenderit impedit sunt eos debitis deleniti culpa, labore nobis consectetur, aliquid.</p>
+			<div class="container">
+				<div class="row">
+					<h3 class="h3">Записывайтесь сейчас и забирайте свой <br><span class="tdu">подарок</span>, ценностью в 57$...</h3>
+					<h4 class="h4">Регистрируйтесь на занятие сейчас и мы сразу же отправим Вам на Email <br> видео-курс “<span class="tdu">Эффективная профилактика и нейтрализация стресса</span>”</h4>
+					<div class="cf">
+						<div class="col-xs-12 col-sm-6">
+							
 						</div>
-						<div class="border-block col-xs-12 col-sm-4">
-							<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa error voluptatum libero quasi earum odio quia voluptatibus distinctio obcaecati laudantium.</span><span>Autem nihil pariatur mollitia praesentium omnis labore cum, sint similique modi voluptatibus eos illo saepe repellat commodi. Facere, ipsa, ullam.</span></p>
+						<div class="col-xs-12 col-sm-4">
+							<div class="form-block">
+								<p>Оставьте свои данные в форме ниже и мы отправим Вам видео-курс в <span class="tdu">течение 2 минут!</span></p>
+							</div>
 						</div>
-						<div class="border-block col-xs-12 col-sm-4">
-							<p><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius sunt quibusdam praesentium ut, earum voluptas voluptates numquam enim quasi id.</span>
-							<span>Incidunt veniam nesciunt unde, quia esse dolore architecto soluta omnis nihil alias, qui, cumque delectus. Eaque itaque accusamus libero fugit.</span>
-							<span>Aliquid inventore nihil neque veniam id eius! Harum voluptate, quaerat alias. Repellat illo vitae soluta cumque enim blanditiis deserunt ratione!</span></p>
-						</div>						
 					</div>
-
 				</div>
 			</div>
 		</section>
