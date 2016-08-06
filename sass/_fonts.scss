@@ -1,10 +1,9 @@
 /* ===================== 
 Start: Connect fonts      
 ======================== */
-@include connect-font(ProximaRegular,regular);
-@include connect-font(ProximaBold,bold);
-@include connect-font(ProximaLight,light);
-@include connect-font(ProximaBlack,black_font);
+@include connect-font(HelveticaNeueCyr-Roman,regular);
+@include connect-font(HelveticaNeueCyr-Bold,bold);
+@include connect-font(HelveticaNeueCyr-Light,light);
 /* =====================
 End:  Connect fonts
 ======================== */
