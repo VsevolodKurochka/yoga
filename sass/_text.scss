@@ -16,17 +16,19 @@
   }
   &4{
     color: #272727;
-    @extend .light;
-    font-weight: 100;
-    margin-bottom: 40px;
+    &.s-m{
+      margin-bottom: 25px;
+    }
+    &.b-m{
+      margin-bottom: 40px;
+    }
   }
   &1,
   &3{
     @extend .green-l;
     @extend .bold;
   }
-  &3,
-  &4{
+  &3{
     text-align: center;
   }
   
@@ -37,6 +39,11 @@
 .column-title{
   margin-bottom: 30px;
 }
+// [class*="col-"]{
+//   .h3{
+//     text-align: left;
+//   }
+// }
 @include resp-min(sm){
   .h1{
     font-size: 50px;
@@ -46,6 +53,12 @@
   }
   .h3{
     margin-bottom: 20px;
+    &.m-m{
+      margin-bottom: 50px;
+    }
+    &.b-m{
+      margin-bottom: 70px;
+    }
   }
   .h4{
     @include size(text_title);
@@ -82,8 +95,8 @@
     margin: 15px 0;
   }
   .h3{
-    @include size(normal_title);
-    margin-bottom: 50px;
+    @include size(text_title);
+    margin-bottom: 30px;
   }
   .subtitle{
     @include size(text_default);
@@ -99,6 +112,6 @@
 
   }
   .h3{
-    @include size(text_title);
+    @include size(text_big);
   }
 }

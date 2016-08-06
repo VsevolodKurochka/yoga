@@ -11,28 +11,17 @@ body{
     &-center{
       text-align: center;
     }
+    &-right{
+      text-align: right;
+    }
+    &-left{
+      text-align: left;
+    }
 }
-.display-none,
-.hide,
-.hidden {
-  display: none !important;
-}
-.display-block,
-.show {
-  display: block !important;
-}
-.invisible {
-  visibility: hidden;
-}
-.text-hide {
-  font: 0/0 a;
-  color: transparent;
-  text-shadow: none;
-  background-color: transparent;
-  border: 0;
-}
-.affix {
-  position: fixed;
+@for $i from 1 through 3{
+  .z-index-#{$i}{
+    z-index: $i;
+  }
 }
 img{
   @extend .block-inline;

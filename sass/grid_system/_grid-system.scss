@@ -69,10 +69,6 @@ End:  HIDDEN AND VISIBLE UTILITIES
 [class*="col-"] {
   @extend %global-block;
   float: left;
-  .h3{
-    text-align: left;
-    margin-bottom: 15px;
-  }
 }
 
 .container, .container-inner{
@@ -93,11 +89,17 @@ End:  HIDDEN AND VISIBLE UTILITIES
 .padding-block{
   padding-top: 50px;
   padding-bottom: 50px;
+  @include resp-max(sm){
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
 }
 section{
   @extend .cf;
   @extend .padding-block;
   @extend %relative;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 /* ===================== 
 Start: CENTERING      
@@ -112,6 +114,17 @@ Start: CENTERING
     .pull-#{$br-name}-right{
       float: right;
     }
+  }
+}
+@include resp-max(sm){
+  .max-sm-negative{
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+}
+@include resp-min(sm){
+  .min-sm-left{
+    text-align: left;
   }
 }
 /* =====================

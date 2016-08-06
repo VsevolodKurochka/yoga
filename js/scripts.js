@@ -27,4 +27,12 @@ $(document).ready(function(){
 		$(window).on('hashchange', function(e){
 			history.replaceState ("", document.title, e.originalEvent.oldURL);
 		});
+		$(".review .play-btn").click(function(){
+			$(this).parent().next().toggleClass("review-video-visible")
+		});
+		$(".review-video-close").click(function(){
+			$(this).parent().parent().toggleClass("review-video-visible");
+			$(this).next().children().html("");
+		});
+		
 });	

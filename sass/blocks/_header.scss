@@ -15,8 +15,18 @@ Start: HEADER
 		transition: all ease .5s;
 		ul{
 			li{
-				display: inline-block;
-				padding: 40px 10px;
+				@include resp-min(md){
+					padding: 40px 10px;
+					display: inline-block;
+				}
+				@include resp-max(md){
+					display: block;
+					a{
+						display: block;
+						width: 100%;
+						padding: 15px 10px;
+					}
+				}
        			vertical-align: middle;
 				a{
 					text-decoration: none;
@@ -42,13 +52,17 @@ Start: HEADER
 		}
 	}
 	&-container-text{
-		@include resp-min(sm){
+		margin-top: 40px;
+	}
+	@include resp-min(md){
+		&-btn{
+			padding-top: 30px;
+		}
+		&-container-text{
 			margin-top: 120px;
 		}
 	}
-	&-btn{
-		padding-top: 30px;
-	}
+	
 	&-shadow{
 		position: absolute;
 		bottom: 0;
@@ -73,16 +87,15 @@ Start: HEADER
 		    top: 30px;
 		    background-color: #ddd;
 		    z-index: 10;
+		    text-align: center;
 		    &-open{
 		    	right: 0;
 		    	left: auto;
 		    	overflow-y: auto;
 			}
 		}
-		&-menu{
-			@include resp-max(md){
-				text-align: center;
-			}
+		@include resp-min(sm){
+			padding-bottom: 90px;
 		}
 	}
 	.navbar-toggle{

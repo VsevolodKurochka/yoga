@@ -4,6 +4,9 @@ Start: Connect fonts
 @include connect-font(HelveticaNeueCyr-Roman,regular);
 @include connect-font(HelveticaNeueCyr-Bold,bold);
 @include connect-font(HelveticaNeueCyr-Light,light);
+.light{
+	font-weight: 100;
+}
 /* =====================
 End:  Connect fonts
 ======================== */
